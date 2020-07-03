@@ -1,13 +1,13 @@
 provider "aws" {
   shared_credentials_file = "~/.aws/credentials"
-  region  = "us-west-2"
+  region  = "<your-region>"
   version = "~> 2.69"
 }
 
 terraform {
   backend "s3" {
-    bucket = "tf-foundry.coyfox.net"
-    key    = "foundry.tfstate"
+    bucket = "<your-tf-bucket>"
+    key    = "<your-tf-key>"
   }
 }
 
